@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-100 font-body antialiased;
+    background-image: 
+      radial-gradient(ellipse at 20% 20%, rgba(14, 142, 232, 0.08) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 80%, rgba(255, 71, 87, 0.05) 0%, transparent 50%);
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .status-badge {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-mono font-medium uppercase tracking-wider;
+  }
+
+  .status-new {
+    @apply bg-emerald-500/15 text-emerald-400 border border-emerald-500/30;
+  }
+
+  .status-updated {
+    @apply bg-amber-500/15 text-amber-400 border border-amber-500/30;
+  }
+
+  .status-inactive {
+    @apply bg-slate-500/15 text-slate-400 border border-slate-500/30;
+  }
+
+  .status-imported {
+    @apply bg-harbour-500/15 text-harbour-400 border border-harbour-500/30;
+  }
+
+  .glass-card {
+    @apply bg-slate-900/60 backdrop-blur-sm border border-slate-800/80;
+  }
+
+  .btn-primary {
+    @apply bg-harbour-600 hover:bg-harbour-500 text-white font-medium px-5 py-2.5 rounded-lg transition-all duration-200 active:scale-95;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700 hover:border-slate-600 px-5 py-2.5 rounded-lg transition-all duration-200;
+  }
+
+  .input-field {
+    @apply bg-slate-800/60 border border-slate-700 text-slate-100 placeholder-slate-500 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-harbour-500/50 focus:border-harbour-500 transition-colors;
+  }
+}
